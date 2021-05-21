@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { Component } from 'react';
+import TitleBar from './TileBar/titleBar';
 
 class App extends Component {
     constructor(props) {
@@ -28,8 +29,10 @@ componentDidMount(){
 
     render() { 
         //console.log(this.state.songLibrary)
-        return ( 
+        return ( <div>
+            <TitleBar />
             <h1>Our React App Using a Component</h1>
+            </div>
          );
     }
 }

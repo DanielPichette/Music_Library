@@ -5,6 +5,6 @@ function TitleBar(props) {
         <div>
             <h1>Music Lirary</h1>
         </div>
-    )
+    );
 }
 export default TitleBar;

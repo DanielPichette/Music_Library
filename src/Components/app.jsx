@@ -5,8 +5,13 @@ import TitleBar from './TileBar/titleBar';
 class App extends Component {
     constructor(props) {
         super(props);
-        this.songs = [];
-
+        this.songs = [
+        {id: '1', title: 'Chanel', artist: 'rank Ocean', album: 'Chanel', release_date: '2017-03-10'},
+        {id: '2', title: "Pretty Please", artist: "Dua Lipa", album: "Future Nostalgia", release_date: "2021-03-27"},
+        {id: '3', title: "Fake Mona Lisa", artist: "Carly Rae Jepson", album: "Dedicated Side B", release_date: "2020-05-21"},
+        {id: '4', title: "Ocean Drive", artist: "Duke Dumont", album: "Duality", release_date: "2015-07-21"},
+        {id: '6', title: "Good 4 you", artist: "Olivia Rodrigo", album: "Good 4 you", release_date: "2021-05-11T"},
+        ];
         this.state = {
             songNumber: 0
         }
@@ -15,24 +20,51 @@ class App extends Component {
 componentDidMount(){
     axios.get('http://127.0.0.1:8000/music/')
     .then(response=>{
-        //ßconsole.log(response.data);
-        this.setState({
-            songLibrary:response.data
-        })
+        console.log('has mounted')
+        //console.log(response.data);
+        //this.setState({
+            //songLibrary:response.data
+       // })
         this.songs = response.data
         console.log(this.songs, 'songs')
-    })
+    });
 }
 
 
 
-
     render() { 
-        //console.log(this.state.songLibrary)
-        return ( <div>
+        //console.log(this.songs[1].id)
+        return ( 
+        <div>
             <TitleBar />
-            <h1>Our React App Using a Component</h1>
+            <h1>Music library project test component</h1>
+            <div>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Current Music List</th>
+                    </tr>
+                    </thead>
+                    <thead>
+                    <tr>
+                        <th>Song</th>
+                        <th>Artist</th>
+                        <th>Album</th>
+                        <th>Release Date</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{this.songs[this.state.songNumber].title}</td>
+                        <td>{this.songs[this.state.songNumber].artist}</td>
+                        <td>{this.songs[this.state.songNumber].album}</td>
+                        <td>{this.songs[this.state.songNumber].release_date}</td>
+                    </tr>
+                    </tbody>
+                    <tfoot></tfoot>
+                </table>
             </div>
+        </div>
          );
     }
 }

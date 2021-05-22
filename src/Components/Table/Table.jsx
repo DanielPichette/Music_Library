@@ -1,8 +1,9 @@
 import React from 'react'
 
 function SongListTable(props) {
+
     return (
-        <table>
+        <table id="SongListTable">
         <thead>
         <tr>
             <th>Current Music List</th>
@@ -17,12 +18,16 @@ function SongListTable(props) {
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>{props.song.title}</td>
-            <td>{props.song.artist}</td>
-            <td>{props.song.album}</td>
-            <td>{props.song.release_date}</td>
-        </tr>
+            {props.songlist.map((song)=> {
+                return (
+                <tr>
+                    <td>{song.title}</td>
+                    <td>{song.artist}</td>
+                    <td>{song.album}</td>
+                    <td>{song.release_date}</td>
+                </tr>
+                )}
+            )}
         </tbody>
         <tfoot></tfoot>
     </table>

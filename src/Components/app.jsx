@@ -14,8 +14,7 @@ class App extends Component {
         {id: '6', title: "Good 4 you", artist: "Olivia Rodrigo", album: "Good 4 you", release_date: "2021-05-11T"},
         ];
         this.state = {
-            songNumber: 0
-        }
+            songNumber: 2        }
     }
 
 componentDidMount(){
@@ -40,7 +39,7 @@ componentDidMount(){
             <TitleBar />
             <h1>Music library project test component</h1>
             <div>
-                <SongListTable song={this.songs[this.state.songNumber]}/>
+                <SongListTable songlist={this.songs}  song={this.songs[this.state.songNumber]}/>
             </div>
         </div>
          );

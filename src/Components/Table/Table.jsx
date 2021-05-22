@@ -2,6 +2,7 @@ import React from 'react'
 
 function SongListTable(props) {
 
+
     return (
         <table id="SongListTable">
         <thead>
@@ -15,6 +16,9 @@ function SongListTable(props) {
             <th>Artist</th>
             <th>Album</th>
             <th>Release Date</th>
+            <th>Delete</th>
+
+            
         </tr>
         </thead>
         <tbody>
@@ -24,7 +28,8 @@ function SongListTable(props) {
                     <td>{song.title}</td>
                     <td>{song.artist}</td>
                     <td>{song.album}</td>
-                    <td>{song.release_date}</td>
+                    <td>{song.release_date}</td>]
+                    <td><button type='submit' >Delete</button></td>
                 </tr>
                 )}
             )}

@@ -1,8 +1,7 @@
 import React from 'react'
 
 function SongListTable(props) {
-
-
+    
     return (
         <table id="SongListTable">
         <thead>
@@ -23,7 +22,8 @@ function SongListTable(props) {
         </tr>
         </thead>
         <tbody>
-            {props.songlist.map((song)=> {
+            {
+            props.songlist.map((song)=> {
                 return (
                 <tr>
                     <td>{song.title}</td>

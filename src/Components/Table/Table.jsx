@@ -6,9 +6,9 @@ function SongListTable(props) {
     return (
         <table id="SongListTable">
         <thead>
-        <tr>
+        {/* <tr>
             <th>Current Music List</th>
-        </tr>
+        </tr> */}
         </thead>
         <thead>
         <tr>
@@ -17,7 +17,7 @@ function SongListTable(props) {
             <th>Album</th>
             <th>Genre</th>
             <th>Release Date</th>
-            <th>Delete</th>
+            <th></th>
 
             
         </tr>
@@ -30,7 +30,7 @@ function SongListTable(props) {
                     <td>{song.artist}</td>
                     <td>{song.album}</td>
                     <td>{song.genre}</td>
-                    <td>{song.release_date}</td>]
+                    <td>{song.release_date}</td>
                     <td><button type='submit' >Delete</button></td>
                 </tr>
                 )}

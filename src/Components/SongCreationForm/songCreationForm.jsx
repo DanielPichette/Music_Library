@@ -38,25 +38,25 @@ class AddSong extends Component {
             <form onSubmit={(event) => this.handleSubmit(event)}>
                 <div>
                     <label>Song Name</label>
-                    <input type="text" name="title" onChange={(event) => this.handleChange(event)}></input>
+                    <input className="rounded-input" type="text" name="title" onChange={(event) => this.handleChange(event)}></input>
                 </div>
                 <div>
                     <label>Artist</label>
-                    <input type="text" name="artist" onChange={(event) => this.handleChange(event)}></input>
+                    <input className="rounded-input" type="text" name="artist" onChange={(event) => this.handleChange(event)}></input>
                 </div>
                 <div>
                     <label>Album</label>
-                    <input type="text" name="album" onChange={(event) => this.handleChange(event)}></input>
+                    <input className="rounded-input" type="text" name="album" onChange={(event) => this.handleChange(event)}></input>
                 </div>
                 <div>
                     <label>Genre</label>
-                    <input type="text" name="genre" onChange={(event) => this.handleChange(event)}></input>
+                    <input className="rounded-input" type="text" name="genre" onChange={(event) => this.handleChange(event)}></input>
                 </div>
                 <div>
                     <label>Release date</label>
-                    <input type="text" name="release_date" onChange={(event) => this.handleChange(event)}></input>
+                    <input type="text" className="rounded-input" name="release_date" onChange={(event) => this.handleChange(event)}></input>
                 </div>
-                <button type="submit">Add Song</button>
+                <button type="submit" >Add Song</button>
             </form>
          );
     }

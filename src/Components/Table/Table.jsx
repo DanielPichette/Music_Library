@@ -1,9 +1,11 @@
 import React from 'react'
+import './Table.css';
+
 
 function SongListTable(props) {
     
     return (
-        <table id="SongListTable">
+        <table id="SongListTable" className="styled-table">
         <thead>
         {/* <tr>
             <th>Current Music List</th>
